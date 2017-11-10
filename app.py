@@ -17,7 +17,7 @@ app.secret_key = os.urandom(32)
 def hello():
     data = urllib2.urlopen("https://api.nasa.gov/planetary/apod?api_key=2xSMrhjPmUbRcvpmuie0c1j1cSGdivcHZcU0uPE0")
     string = data.read()
-    d = data.loads(string)
+    d = json.loads(string)
     img = d["url"]
     title = d["title"]
     explanation = d["explanation"]
