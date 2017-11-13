@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Street Closures!</title>
+    <h1> <center> <b>Street Closures...</b> </center> </h1>
+  </head>
+<body>
+    {% for d in l %}
+    <ul>
+      <li> In {{d["borough"]}}, there is a closure from {{d["fromS"]}} to {{d["toS"]}} on {{d["onS"]}} due to {{d["purpose"]}}. </li>
+    </ul>
+    {% endfor %}
+</body>
+</html>
